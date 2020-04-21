@@ -1,7 +1,7 @@
 const initialize = () => {
 	const domain = document.domain || '127.0.0.1';
 	const port = location.port || 5000;
-	const socket = io.connect('http://' + domain + ':' + port);
+	const socket = io.connect(`http://${domain}:${port}`);
 	const button = window.document.getElementById('send');
 
 	socket.on('connect', () => {
